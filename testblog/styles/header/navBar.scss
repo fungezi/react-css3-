@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.navbar{
+	position: fixed;
+	z-index: 100;
+	right: 31px;
+	top: -15px;
+	& ul{
+		overflow: hidden;
+		width: 918px;
+		& li{
+			float: left;
+			display: block;
+			width: 16.66%;
+			background-color: #4C4C4C;
+			padding: 18px 0px;
+			text-align: center;
+			color: white;
+
+			& a{
+				color: white;
+			}
+		}
+	}
+}
+

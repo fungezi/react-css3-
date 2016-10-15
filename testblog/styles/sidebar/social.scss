@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.social-logo {
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  text-indent: -9999px;
+  margin: 0 8px 15px 8px;
+  opacity: 0.7;
+  width: 28px;
+  height: 28px;
+  transition: 0.3s;
+}
+
+.zhihu {
+  composes: social-logo;
+  border: 1px solid #0078d8;
+  background: url("image/zhihu.png") center no-repeat #0078d8;
+}
+
+.github {
+  composes: social-logo;
+  background: url("image/github.png") center no-repeat #afb6ca;
+  border: 1px solid #afb6ca;
+}

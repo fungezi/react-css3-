@@ -1,0 +1,124 @@
+@import "../mixin/mixin";
+
+.article {
+  margin: 30px;
+  margin-top: 60px;
+  position: relative;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 0;
+  @extend %clear-fix;
+}
+
+.title {
+  border-left: 5px solid;
+  height: 65px;
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 65px;
+  font-size: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 25px;
+}
+
+.time {
+  height: 65px;
+  line-height: 65px;
+  margin-right: 25px;
+  color: #999;
+  float: right;
+  font-size: 17px;
+  &:before {
+    color: #999;
+    content: "\f073";
+    font: 17px FontAwesome;
+    margin-right: 10px;
+  };
+}
+
+.markdown div {
+  font-size: 15px;
+  line-height: 1.8;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  blockquote {
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-left: 5px solid #657b83;
+    background: #f6f6f6;
+  }
+
+  & > p {
+    margin-top: 10px;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  code {
+    padding: 1px 3px;
+    margin: 0 3px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+
+  pre {
+    * {
+      color: #fff;
+    }
+    line-height: 1.5;
+    color: #657b83;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    text-shadow: 0 1px #444;
+    background: #272822;
+    margin: 10px 0;
+    padding: 10px 10px;
+    overflow: auto;
+    code {
+      border: none;
+      background: none;
+      text-shadow: none;
+      padding: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #258fb8;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 30px 30px 0 30px;
+  border-top: 1px solid #ddd;
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: top;
+  &::before {
+    color: #999;
+    content: "\f06c";
+    font: 16px FontAwesome;
+    float: left;
+    margin-right: 10px;
+    margin-top: 7px;
+  }
+}

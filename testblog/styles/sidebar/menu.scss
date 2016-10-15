@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.container {
+  text-align: center;
+}
+
+.link {
+  font-size: 14px;
+  display: block;
+  &:hover {
+    color: #b0a0aa;
+  }
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+}

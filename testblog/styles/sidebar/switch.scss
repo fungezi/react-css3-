@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.switch {
+  transition: transform 0.2s linear;
+  position: relative;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 0;
+  min-height: 200px;
+  & > div {
+    position: absolute;
+    width: 100%;
+    &:first-child {
+      left: 0;
+    }
+    &:nth-child(2) {
+      left: 100%;
+    }
+    &:nth-child(3) {
+      left: 200%;
+    }
+  }
+}
+
+.menu {
+  transform: translate(0, 0);
+}
+
+.tags {
+  transform: translate(-100%, 0);
+}
+
+.me {
+  transform: translate(-200%, 0);
+}

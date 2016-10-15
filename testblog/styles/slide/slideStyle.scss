@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.dots{
+  padding: 5px;
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+}
+.dots ul li{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin:0px 10px;
+  background-color: red;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+.slideItem{
+  transition:all 0.4s;
+  -webkit-transition:all 0.4s;
+}
+.slideItem img{
+  width: 100%;
+  display: block;
+}
+.slideCenter{
+  left:0px;
+  top: 0px;
+
+}
+.slideLeft{
+  left: -100%;
+  top: 0px;
+}
+.slideRight{
+  left: 100%;
+  top: 0px;
+}

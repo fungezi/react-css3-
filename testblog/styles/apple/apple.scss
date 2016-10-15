@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+.appleBox{
+	width: 400px;
+	margin:50px auto;
+	padding: 20px;
+	border:1px solid gray;
+}
+.title{
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	font-family: "Micrsoft yahei";
+}
+.section{
+	width: 50%;
+	text-align: center;
+	float: left;
+	padding: 10px 0px;
+}
+.stats{
+	overflow: hidden;
+}
+.getApple{
+	width: 120px;
+	margin: 0px auto;
+	height: 40px;
+	background-color: #169967;
+	text-align: center;
+	color: white;
+	line-height: 40px;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 5px;
+}
+.appleItem{
+	width: 300px;
+	margin: 0px auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border:1px solid #E4E4E4;
+	padding: 5px;
+}
+.appleImg{
+	float: left;
+	width: 60px;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.appleMes{
+	float: left;
+	width:160px;
+	span{
+		display: block;
+		text-align: center;
+		font-size: 14px;
+		line-height: 30px;
+	}
+}
+.eatAppleBtn{
+	width: 80px;
+	float: left;
+	background-color: #169967;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color: white;
+	margin-top: 12px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+

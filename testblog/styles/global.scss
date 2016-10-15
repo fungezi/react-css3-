@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "微软雅黑", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: rgba(0,0,0,0.6);
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin:0px;
+}
+*{
+  padding: 0px;
+  margin:0px;
+}
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #696969;
+}
+
+.dots{
+  padding: 5px;
+  position: absolute;
+}
+.dots ul li{
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
