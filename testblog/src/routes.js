@@ -13,18 +13,21 @@ import reducers from './reducers.js';
 import App from './App.js';
 import Home from './containers/Home.js';
 import ShowList from './containers/ShowList.js';
+import ArtPage from './containers/ArtPage.js'
 
 const store = createStore(reducers,applyMiddleware(Thunk));
 
-const history = syncHistoryWithStore(browserHistory,store);
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDom.render(
 	<Provider store = {store} >
 		<Router history = {history}>
-			<Route path = '/' component = {App} >
-				<IndexRoute component = { Home } />
+			<Route path = '/' component = {Home} ></Route>
+			<Route path='/project' component= {ShowList} ></Route>
+			<Route path='/showList' component = {App} >
+				<Route path=':cateId' component= {ShowList} ></Route>
 			</Route>
-			<Route path='/list' component= {ShowList} ></Route>
+			<Route path="/artPage/:pageId" component= { ArtPage }></Route>
 		</Router>
 	</Provider>,document.getElementById('app')
 

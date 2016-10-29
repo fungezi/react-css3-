@@ -11,23 +11,55 @@
   width: 15px;
   height: 15px;
   margin:0px 10px;
-  background-color: red;
+  background-color: #f1f1f1;
   border-radius: 8px;
   cursor: pointer;
+  transition:all 0.4s;
+  -webkit-transition:all 0.4s;  
 
 }
 .slideItem{
-  transition:all 0.4s;
-  -webkit-transition:all 0.4s;
+  width:100%;
+  height:500px;
+  position:absolute;      
+  background-color:#ffd;      
+  background-position:top center;      
+  background-repeat:no-repeat;
+  transition:all 0.6s;
+  -webkit-transition:all 0.6s;
 }
 .slideItem img{
-  width: 100%;
+  // width: 100%;
   display: block;
+  margin: 0px auto;
+  text-align: center;
 }
 .slideCenter{
   left:0px;
   top: 0px;
 
+}
+.Arron{
+  width:50px;
+  height:50px;
+  margin-top:-25px;
+  position:absolute;
+  cursor: pointer;
+  top:50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color:white;
+  font-size:30px;
+  text-align:center;
+  line-height:45px;
+  border-radius:28px;
+  transition:all 0.4s;
+  -webkit-transition:all 0.4s;
+}
+.Arron:hover{
+  width:56px;
+  line-height: 53px;
+  height:56px;
+  background-color: #019ae5;
 }
 .slideLeft{
   left: -100%;
@@ -37,3 +69,233 @@
   left: 100%;
   top: 0px;
 }
+.activeIndexs{
+  background-color: white;
+}
+.navBar{
+  float: right;
+  margin-right: 50px;
+}
+.navBar li{
+  display: block;
+  float: left;
+}
+.navBar li a{
+  display: block;
+  padding: 10px 10px;
+  color: white;
+  line-height: 32px;
+}
+.header{
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 6px 0px;
+  z-index: 4;
+}
+.logo{
+  width: 80px;
+  float: left;
+  margin-left: 20px;
+
+}
+.logo img{
+  width: 100%;
+  display: block;
+}
+body{
+  background-color: #f3f5f7;
+}
+.design{
+  // height: 400px;
+  overflow: hidden;
+  
+  margin-bottom: 20px;
+}
+.articleBox{
+  width: 25%;
+  float: left;
+  margin-top: 30px;
+
+}
+.articleCon{
+  position: relative;
+  padding-bottom: 10px;
+  width: 90%;
+  margin:0px auto;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+  transition:all .8s;
+}
+.articleCon:hover{
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.articleCon img{
+  width: 100%;
+  display: block;
+}
+.articleCon h3{
+  padding: 10px 0px;
+  overflow: hidden;
+  text-indent: 10px;
+  font-size: 14px;
+  color: #07111b;
+}
+.articleCon .desArtmes{
+  width: 100%;
+  margin:0px auto;
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+.articleCon span{
+  font-size: 12px;
+
+  margin: 10px;
+  font-family: 'PingFang SC', Helvetica, 'Helvetica Neue', 微软雅黑, Tahoma, Arial, sans-serif;
+  color: #93999f;
+}
+.ArticleList{
+  width: 1000px;
+  margin:0px auto;
+}
+.desArtImg{
+  padding: 0px;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  top: 100px;
+}
+.articleContent{
+  overflow: hidden;
+  height: 0px;
+  transition:height 0.4s;
+}
+.articleCon:hover .articleContent{
+  overflow: hidden;
+  height: 65px;
+}
+.articleContent p{
+  text-indent: 2em;
+  padding: 15px;
+  line-height: 20px;
+  padding-top: 0px;
+  color: #93999f;
+  font-size: 12px;
+}
+.footer{
+  background-color: #000000;
+  margin: 20px 0px;
+  margin-bottom: 0px;
+}
+.footerBox{
+  width: 1000px;
+  margin: 0px auto;
+  padding: 15px 0px;
+  color: white;
+  overflow: hidden;
+}
+.footerBox ul{
+  overflow: hidden;
+}
+.footerBox ul li{
+  display: block;
+  float: left;
+  margin: 0px 15px;
+}
+.footerBox p{
+  display: block;
+  width: 100%;
+  text-indent: 16px;
+  padding: 7px 0px; 
+  font-size: 12px;
+  color: #787d82;
+}
+.footerBox ul li a{
+  color: #c8cdd2;
+  font-size: 12px;
+  transition:color 0.8s;
+  font: 14px/1.5 "PingFang SC", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+}
+.footerBox ul li a:hover{
+  color: white;
+}
+.contactIcon{
+  float: right;
+}
+.contactIcon a{
+  display: inline-block;
+  height: 50px;
+  width:50px;
+  opacity: .6;
+  transition:opacity 0.5s;
+}
+.contactIcon a:hover{
+  opacity: 1;
+}
+.conIconwb{
+  background-position: 9px 94px;
+}
+.conIconwx{
+  background-position: 9px 136px;
+}
+.conIconqq{
+  background-position: 9px 51px;
+}
+.footermesList{
+  float: left;
+}
+.pagenumslist{
+  // background-color: gray;
+
+  overflow: hidden;
+  margin:0px auto;
+}
+.pagecon{
+  display: table;
+  margin: 0px auto;
+}
+.pagenum{
+  float: left;
+  margin: 8px;
+}
+.pagenum span{
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  text-align: center;
+}
+.pageActive{
+  background-color: #5e5e5e !important;
+  color: white;
+}
+.totalPageNum{
+  height: 30px;
+  padding: 0px 10px;
+  line-height: 30px;
+  display: block;
+  cursor: pointer;
+  background-color: white;
+  text-align: center;
+  float: left;
+  margin: 8px;
+}
+.totalPageNums{
+  cursor: auto;
+}
+
+
+
+
+
+
+
