@@ -26,7 +26,7 @@ module.exports = new WebpackConfig().merge({
 	resolve: {
 		extensions: ['', '.js', '.jsx', '.scss', '.css'],
 		// 快捷路径，可以直接 import 该目录下的文件
-		modulesDirectories: ['node_modules', 'styles', 'static', 'src'],
+		modulesDirectories: ['node_modules', 'styles', 'static', 'src','ueditor'],
 		alias: {
 			// 指定公共库的位置，优化webpack搜索硬盘的速度
 			'react': path.join(nodemodulesPath, 'react'),

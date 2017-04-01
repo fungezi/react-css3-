@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>快速排序</title>
+</head>
+<body>
+<script type="text/javascript">
+	// 快速排序的实现
+	function quickSort(arr){
+		var medianIndex = Math.round(Math.random() * arr.length);
+		if(arr.length <= 1) return arr;
+		median = arr.splice(medianIndex,1);
+		var left = [],right = [];
+		arr.forEach(function(item){
+			if(item > median) left.push(item);
+			if(item < median) right.push(item);
+		});
+		return quickSort(left).concat(median,quickSort(right));
+	}
+</script>
+</body>
+</html>

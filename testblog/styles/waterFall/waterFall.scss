@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+
+.imgBox{
+    width: 230px;
+    position: relative;
+    background-color: white;
+    font-family: "helvetica neue",arial,sans-serif;
+    position: absolute;
+}
+.imgBox .imgBoxPos{
+    position: relative;
+}
+.imgBox:hover .handleBtn{
+	display: block;
+}
+.handleBtn{
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+}
+.getBtn,.loveBtn{
+	display: inline-block;
+    line-height: 1;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 8px;
+    height: 23px;
+    line-height: 23px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #444;
+    white-space: nowrap;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-align: center;
+	background-color: green;
+	margin: 6px;
+	float: left;
+	color: #fff;
+	background-color: #cc2929;
+
+}
+.getBtn{
+	float: left;
+	color: #fff;
+	background-color: #1cb793;
+
+}
+.getBtn:hover{
+	text-decoration: none;
+    color: #fff;
+    background-color: #0f7d64;
+}
+
+.loveBtn{
+	float: right;
+}
+.targetImg{
+	display: block;
+	width: 100%;
+}
+
+.imgBox:hover .cover{
+	display: block;
+}
+.cover{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: white;
+	opacity: 0.1;
+	filter:alpha(opacity=0.1);
+}
+.imgDesc{
+	width: 96%;
+	margin: 0px auto;
+	line-height: 1.35em;
+	font-size: 12px;
+	background-color: white;
+	padding: 6px 0px;
+	color: #444;
+	overflow: hidden;
+}
+.imgMaskBox{
+	height: 34px;
+	overflow: hidden;
+}
+.imgDescCon{
+	position: relative;
+	overflow: hidden;
+	text-indent: 2em;
+}
+.imgDesc span{
+	margin-top: 2px;
+	color: #8c7e7e;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+.imgDCL{
+}
+.imgDCR{
+	width: 100%;
+	right: -50%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	overflow: hidden;
+}
+.imgDCR:before{
+	content: "";
+	width: 50%;
+	display: block;
+	height: 40px;
+	float: left;
+}
+.imgMoreSpace{
+	float: right;
+	width: 50%;
+	height: 100%;
+	// background-color: blue;
+}
+.imgDesMore{
+	float: right;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: -26px;
+	background: white;
+	position: relative;
+	z-index: 3;
+	letter-spacing: 3px;
+	text-indent: 5px;
+}
+.waterFallContainer{
+	position: relative;
+	background-color: gray;
+}
+
+
+

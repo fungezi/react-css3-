@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<style type="text/css">
+		#container{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.a{
+			width: 200px;
+			height: 100px;
+			background-color: blue;
+			padding: 10px;
+		}
+		.b{
+			width: 100px;
+			height: 100px;
+			float: left;
+			background-color: orange;
+		}
+		.c{
+
+		}
+		.left,.right{
+			width: 50%;
+			float: left;
+			/*background-color: orange;*/
+			height: 40px;
+			margin-left: -50px;
+		}
+		.inner{
+			margin-left: 50px;
+			height: 30px;
+			background-color: green;
+		}
+		.center{
+			width: 100px;
+			float: left;
+			height: 40px;
+			background-color: red;
+		}
+		.d{
+			display: flex;
+			height: 50px;
+			background-color: red;
+			width: 100%;
+		}
+		.d>div{
+			height: 70px;
+			/*background-color: blue;*/
+		}
+		.last-child,.first-child{
+			flex: 1;
+		}
+		.e{
+			width: 120px;
+			background-color: orange;
+		}
+		.rr{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			/*vertical-align: middle;*/
+			display: table;
+		}
+		.mm{
+			
+			background-color: blue;
+			vertical-align: middle;
+			display: table-cell;
+		}
+		.cmm{
+			width: 10px;
+			height: 30px;
+			background-color: orange;
+		}
+		.rr1{
+			width: 100px;
+			height: 100px;
+			background-color: gray;
+			overflow: hidden;
+		}
+		.mm1{
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			margin-top: 20px;
+		}
+		.flexBox{
+			width: 600px;
+			display: flex;
+			margin:0px auto;
+			background-color: gray;
+			height: 300px;
+			/*justify-content: flex-end;*/
+			/*justify-content: flex-start;*/
+			/*justify-content: center;*/
+			justify-content: space-around;
+		}
+		.flexBox>div{
+			width: 80px;
+			background-color: orange;
+			height: 100px;
+
+		}
+	</style>
+</head>
+<body>
+<div id="container" class="container">sdadsdsadasdasdasdd</div>
+<span id="foo[bar]"></span>
+<div class="a">
+	<div class="b">1</div>
+	<div class="b">2</div>
+</div>
+<div class="c" >
+	<div class="left"><div class="inner"></div></div>
+	<div class="center"></div>
+	<div class="right"><div class="inner"></div></div>
+</div>
+<div class="d">
+	<div class="first-child"></div>
+	<div class="e"></div>
+	<div class="last-child"></div>
+</div>
+<div class="rr">
+	<div class="mm"><div class="cmm"></div></div>
+</div>
+<div class="rr1">
+	<div class="mm1"></div>
+</div>
+<div class="flexBox">
+	<div class="fb1">1</div>
+	<div class="fb2">2</div>
+	<div class="fb3">3</div>
+</div>
+<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	var handler = function(){
+		console.log('click');
+	}
+	$("#container").bind("click",handler).remove();
+	handler();//输出  click  巨他妈开心
+	$("#foo\\[bar\\]")
+	var container = document.getElementsByClassName('container');
+	console.log(container);
+</script>
+<script type="text/javascript">
+	// 快排实现
+	function quickSort(arr){
+		var arrivate = arr[0];
+		arr.splice(0,1);
+		var left = [],right = [];
+		for(var i = 0;i<arr.length;i++){
+			if(arr[i] < arrivate) left.push(arr[i]);
+			if(arr[i] > arrivate) right.push(arr[i]);
+		}
+		return quickSort(left).concat(arrivate,quickSort(right));
+	}
+</script>
+</body>
+</html>

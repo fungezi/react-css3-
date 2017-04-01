@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+.inputBox{
+	position: relative;
+}
+.inputBox input{
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    // touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.inputBox input:hover{
+    color: #333;
+    text-decoration: none;
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.fileInputBox{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    position: relative;
+    width: 72px;
+    height: 28px;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+.fileInputBox span{
+    line-height: 28px;
+    display: block;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    width:100%;
+    color: white;
+}
+.fileInputBox input{
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    filter:alpha(opacity=0);
+    display: block;
+}
+.imgPreViewBox{
+    width:250px;
+    height: 150px;
+    overflow: hidden;
+    float: left;
+    box-shadow: 0px 0px 5px gray;
+    margin: 0px 10px 10px;
+
+}
+.imgPreViewBox img{
+    margin: 0px auto;
+    max-width: 250px;
+    max-height: 250;
+}
+.imgpreviewList{
+    width: 80%;
+    margin: 0px auto;
+    // border: 1px solid gray;
+    overflow: hidden;
+    padding: 20px 0px;
+}
+.imgDelBtn{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+}
+.imgEditBtn{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+}
+.imgDelBtn input{
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.imgDelBtn input:hover{
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+.imgPreViewBox input{
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0px 5px; 
+    margin: 0px;
+}
+.imgPreViewBox{
+    position: relative;
+}
+.imgPreViewBox img{
+    display: block;
+}
+.imgPreViewBox:hover .imgEditBtn{
+    display: block;
+}
+.imgPreViewBox:hover .imgDelBtn{
+    display: block;
+}
+.imgPreViewBox:hover .imgMask{
+    display: block;
+}
+.imgMask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+    display: none;
+    filter:alpha(opacity=0.2);
+}
+.imgEditBox{
+    // width: 400px;
+    // height: 300px;
+    // background-color: green;
+    position: relative;
+    z-index: 3;
+
+}
+.imgEditMask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;
+    background-color: black;
+    opacity: .3;
+}
+.cutBoreder{
+    width: 200px;
+    height: 250px;
+    background-color: gray;
+    // opacity: .3;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    // overflow: hidden;
+    z-index: 4;
+    border: 1px solid gray;
+}
+
+.imgEditBox img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.cutBoreder img{
+    position: absolute;
+    bottom: 0px;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.cutBoreder>div{
+    position: absolute;
+    z-index: 3;
+    // background-color: blue;
+}
+.cutBorederTop{
+    height: 8px;
+    width: 100%;
+    top: -3px;
+    left: 0px;
+    cursor: n-resize;
+}
+.maskForImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    // background-color: gray;
+}
+.cutBorederBottom{
+    height: 8px;
+    width: 100%;
+    bottom: -3px;
+    left: 0px;
+    cursor: s-resize;
+}
+.cutBorederRight{
+    height: 100%;
+    width: 8px;
+    top: 0px;
+    right: -3px;
+    cursor: e-resize;
+}
+.cutBorederLeft{
+    height: 100%;
+    width: 8px;
+    top: 0px;
+    left: -3px;
+    cursor: w-resize;
+}
+
+.cutBoreder span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: orange;
+    position: absolute;
+    z-index: 3;
+}
+.cutDotTL{
+    top: -4px;
+    left: -4px;
+}
+.cutDotTM{
+    top: -4px;
+    left: 50%;
+    margin-left: -4px;
+}
+.cutDotTR{
+    top: -4px;
+    left: 100%;
+    margin-left: -4px;
+}
+.cutDotRM{
+    top: 50%;
+    right: -4px;
+    margin-top: -4px;
+}
+.cutDotRB{
+    bottom: -4px;
+    right: -4px;
+}
+.cutDotBM{
+    bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
+}
+.cutDotBL{
+    bottom: -4px;
+    left: -4px;
+}
+.cutDotLM{
+    top: 50%;
+    margin-top: -4px;
+    left: -4px;
+}
+.imgCutAckBtn,.imgCutCancelBtn{
+    width: 40px;
+    height: 8px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 4;
+}
+.imgCutAckBtn input,.imgCutCancelBtn input{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.imgCutAckBtn {
+    left: 0px;
+}
+.imgCutCancelBtn{
+    right: 0px;
+}
+.imgCutContainer{
+    width: 390px;
+    height: 300px;
+    margin: 0px auto;
+    position: relative;
+    box-shadow: 0px 0px 5px gray;
+    padding: 20px;
+    background-color: white;
+    top: 50%;
+    margin-top: -150px;
+}
+.mediaContainer{
+    // width: 1000px;
+    margin-left: 160px;
+}
+.mediaPos{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.imgCutContainerMask{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(10, 10, 10, 0.58)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

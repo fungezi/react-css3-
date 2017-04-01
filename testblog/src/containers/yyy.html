@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yuxi</title>
+	<style type="text/css">
+		#box1{
+			width: 200px;
+			height: 100px;
+			background-color: red;
+		}
+		#box2{
+			width: 100px;
+			height: 50px;
+			background-color: blue;
+
+		}
+	</style>
+</head>
+<body>
+<div id="box1">
+	
+	<div id="box2"></div>
+	<div></div>
+</div>
+<script type="text/javascript">
+	var canvas = document.createElement("canvas");
+	var tempCanvas = document.createElement("canvas");
+	var w = 300;
+	var h = 200;
+	canvas.width = tempCanvas.width = w;
+	canvas.height = tempCanvas.height = h;
+	document.getElementById("box1").appendChild(canvas);
+	document.getElementById("box1").appendChild(tempCanvas);
+	var ctx = canvas.getContext("2d");
+	var tempCtx = tempCanvas.getContext("2d");
+	var img = new Image();
+	img.onload = function(){
+		ctx.drawImage(img,0,0,w,h);
+		var imgData = ctx.getImageData(0,0,30,30);
+		tempCtx.putImageData(imgData,0,0,0,0,w,h);
+		var newImg = tempCtx.toDataURL("image/png");
+		document.getElementById("box2").innerHTML = "<img src="+ newImg +"/>";
+	}
+	img.src = "https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/spacer1e9c5d.gif";
+	
+</script>
+<script type="text/javascript">
+	var box1 = document.getElementById('box1');
+	box1.onclick = function(e){
+		alert(1);
+	}
+	box2.onclick = function(e){
+		// e.stopPropagation();
+		// alert(2);
+	}
+	//数组方法
+	// 1.concat();
+	var arr1 = [1,2,3];
+	var arr2 = [3,4,5,6];
+	var arr3 = arr1.concat(1);
+	// console.log(arr3);
+	// 2.slice();
+	var e = arr1.slice(1,2);
+	// console.log(e);
+
+	//3.splice();可以理解为替换
+	arr1.splice(0,1);
+	
+	arr1.indexOf(2);
+	arr1.lastIndexOf(2);
+	//迭代方法 every,map,filter,some,forEach
+	var arr = arr1.map(function(e){
+		e += 1;
+		return e;
+	})
+	// console.log(arr);
+	arr2.reduce(function(prev,cur,index,array){
+		// console.log(index);
+	})
+
+	var date = new Date();
+	var hour = date.getHours();
+	var minute = date.getMinutes();
+	var second = date.getSeconds();
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDate();
+	month = month + 1;
+	if(month > 12) month = month%12;
+	// console.log(year+"年"+month+"月"+day+"日"+hour +":"+ minute +":"+ second);
+
+
+	function a(){
+		function b() {
+			// body...
+			inner();
+		}
+		b();
+
+	}
+	function inner(){
+		// alert(arguments.callee)
+		// alert(inner.caller)
+	}
+	a();
+</script>
+<script type="text/javascript">
+    //js本地图片预览，兼容ie[6-9]、火狐、Chrome17+、Opera11+、Maxthon3
+    function PreviewImage(fileObj, imgPreviewId, divPreviewId) {
+      var allowExtention = ".jpg,.bmp,.gif,.png"; //允许上传文件的后缀名document.getElementById("hfAllowPicSuffix").value;
+      var extention = fileObj.value.substring(fileObj.value.lastIndexOf(".") + 1).toLowerCase();
+      var browserVersion = window.navigator.userAgent.toUpperCase();
+      if (allowExtention.indexOf(extention) > -1) {
+        if (fileObj.files) {//HTML5实现预览，兼容chrome、火狐7+等
+          if (window.FileReader) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              document.getElementById(imgPreviewId).setAttribute("src", e.target.result);
+            }
+            reader.readAsDataURL(fileObj.files[0]);
+          } else if (browserVersion.indexOf("SAFARI") > -1) {
+            alert("不支持Safari6.0以下浏览器的图片预览!");
+          }
+        } else if (browserVersion.indexOf("MSIE") > -1) {
+          if (browserVersion.indexOf("MSIE 6") > -1) {//ie6
+            document.getElementById(imgPreviewId).setAttribute("src", fileObj.value);
+          } else {//ie[7-9]
+            fileObj.select();
+            if (browserVersion.indexOf("MSIE 9") > -1)
+              fileObj.blur(); //不加上document.selection.createRange().text在ie9会拒绝访问
+            var newPreview = document.getElementById(divPreviewId + "New");
+            if (newPreview == null) {
+              newPreview = document.createElement("div");
+              newPreview.setAttribute("id", divPreviewId + "New");
+              newPreview.style.width = document.getElementById(imgPreviewId).width + "px";
+              newPreview.style.height = document.getElementById(imgPreviewId).height + "px";
+              newPreview.style.border = "solid 1px #d2e2e2";
+            }
+            newPreview.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='" + document.selection.createRange().text + "')";
+            var tempDivPreview = document.getElementById(divPreviewId);
+            tempDivPreview.parentNode.insertBefore(newPreview, tempDivPreview);
+            tempDivPreview.style.display = "none";
+          }
+        } else if (browserVersion.indexOf("FIREFOX") > -1) {//firefox
+          var firefoxVersion = parseFloat(browserVersion.toLowerCase().match(/firefox\/([\d.]+)/)[1]);
+          if (firefoxVersion < 7) {//firefox7以下版本
+            document.getElementById(imgPreviewId).setAttribute("src", fileObj.files[0].getAsDataURL());
+          } else {//firefox7.0+          
+            document.getElementById(imgPreviewId).setAttribute("src", window.URL.createObjectURL(fileObj.files[0]));
+          }
+        } else {
+          document.getElementById(imgPreviewId).setAttribute("src", fileObj.value);
+        }
+      } else {
+        alert("仅支持" + allowExtention + "为后缀名的文件!");
+        fileObj.value = ""; //清空选中文件
+        if (browserVersion.indexOf("MSIE") > -1) {
+          fileObj.select();
+          document.selection.clear();
+        }
+        fileObj.outerHTML = fileObj.outerHTML;
+      }
+      return fileObj.value;  //返回路径
+    }
+  </script>
+<script type="text/javascript">
+	// 面向对象编程
+	//创建类的方法
+	// 工厂模式（利用一个临时的obj来进行加工产生一个新的obj`并返回）缺点：没法判断类型
+	// 构造函数 （）
+</script>
+</body>
+</html>

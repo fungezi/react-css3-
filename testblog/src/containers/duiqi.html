@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>duiqi</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin:0px;
+		}
+		#main{
+			width: 200px;
+			height: 50px;
+			background-color: green;
+			float: left;
+		}
+		#left,#right{
+			float: left;
+			margin-left: -100px;
+			width: 50%;
+
+		}
+		#left .inner,#right .inner{
+			background-color: orange;
+			margin-left: 100px;
+			padding: 20px 0px;
+		}
+	</style>
+	<script type="text/javascript">
+		function paramDataToUrl(obj){
+			var temp = "";
+			for(var item in obj){
+				if(temp){
+					temp = temp + "&" + item + "=" + obj[item];
+				}else{
+					temp =  "?" + item + "=" + obj[item];
+				}
+			}
+			return temp;
+		}
+		var obj = {
+			y:"1",
+			x:"2"
+		}
+		paramDataToUrl(obj);
+	</script>
+	<script type="text/javascript">
+		function concatStr(str){
+			var string = Array.prototype.slice.call(arguments)[0];
+			var temp = function(str){
+				string = string + "," + Array.prototype.slice.call(arguments)[0];
+				return temp;
+			}
+			temp.string = function(){
+				return string;
+			}
+			return temp;
+		}
+		concatStr("yu")("xi")("li").string();
+
+		function aa(str){
+			var f = function(s){
+				return str +","+ s;
+			}
+		}
+		function aa(){
+			console.log(1);
+			setTimeout(function(){
+				console.log(2);
+			},1000);
+			setTimeout(function(){
+				console.log(3);
+			},0);
+			console.log(4);
+		}
+		aa();
+	</script>
+</head>
+<body>
+	 <div id="left">
+        <div class="inner">this is left sidebar content</div>
+    </div>
+    <div id="main">
+        <div class="inner">this is main content</div>
+    </div>
+    <div id="right">
+        <div class="inner">this is right siderbar content</div>
+    </div>
+</body>
+</html>

@@ -16,7 +16,7 @@ class Home extends React.Component{
 	}
 	render(){
 		let {state,dispatch} = this.props;
-		console.log(this.props.params.par);
+		// console.log(this.props.params.par);
 		let pagemenu = state.pagemenu;
 		let designArtice = state.designArtice;
 		let imgDatas = state.imgDatas;
@@ -576,7 +576,7 @@ class Paging extends React.Component{
 }
 
 
- class Pagenum extends React.Component{
+class Pagenum extends React.Component{
  	render(){
  		let {pagenumber,isCurPage,pageClick,activePages} = this.props;
  		return (
